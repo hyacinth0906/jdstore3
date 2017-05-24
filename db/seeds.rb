@@ -18,3 +18,17 @@ if User.find_by(email: "admin@test.com").nil?
 else
   puts "Admin 已经建立过了，脚本跳过该步骤。"
 end
+
+Product.create!(title: "巧克力戚风",
+  description: "丝滑绵软不甜腻",
+  price: 98,
+  quantity: 5,
+  image: open("http://ww2.sinaimg.cn/large/006tNc79gy1ffr2bhbewdj305k05kaa3.jpg")
+  )
+
+Product.create!(title: "芒果千层",
+  description: "甜甜爽口爱不停",
+  price: 98,
+  quantity: 5,
+  image: open("http://ww4.sinaimg.cn/large/006tNc79gy1ffr2cxnbr0j30b40b4q3i.jpg")
+  )
