@@ -17,3 +17,58 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');   //引入google思源黑简在线字体 需要使用VPN才可生效
+
+body {
+     font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
+     color: #666;                                        // 修改全站的字体主色 压低亮度
+     }
+
+body {
+         background: url("https://previews.123rf.com/images/1stchoice/1stchoice1603/1stchoice160300076/53540925-Doux-fond-d-aquarelle-blanc-gris-rose-peinture-abstraite-p-le-Banque-d%27images.jpg");
+         //使用 iPic这个软件即可将图片转换为图片超链接，app store 搜索 iPic 即可
+
+         background-size: cover;
+         //这段代码主要实现了图片不会被拉伸变现的效果，具体细则在我发布的另一个教程中有说明
+
+         background-attachment: fixed;
+         background-repeat: no-repeat;
+         font-family: 'Open Sans', sans-serif;
+     }
+
+ .navbar-fixed-top {
+         top: 0px;
+     }
+
+ .navbar-fixed-top, .navbar-fixed-bottom {
+         position: fixed;
+         top: 0px;
+         right: 0;
+         left: 0;
+         z-index: 1030;
+     }
+
+ html {
+        position: relative;
+        min-height: 100%;
+      }
+
+ body {
+        /* Margin bottom by footer height */
+        margin-bottom: 100px;
+      }
+
+.footer {
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         /* Set the fixed height of the footer here */
+         height: 100px;
+         background-color: #222222;
+         margin: 0 -15px;
+
+         p {
+            color: white;
+           margin-top: 30px;
+         }
+        }
