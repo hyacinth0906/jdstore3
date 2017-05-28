@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   </head>
 
   <body>
@@ -16,7 +17,6 @@
       <div style="margin-top:50px;">
         <%= yield %>
       </div>
-      <%= yield %>
   </div>
 
   <%= render "common/footer" %>
