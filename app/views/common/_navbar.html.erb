@@ -12,6 +12,20 @@
                 <%= link_to("Products", products_path) %>
              </li>
             </ul>
+            <!-- lw-新增搜索-->
+            <div class="navbar-form navbar-left">
+               <%= form_tag search_products_path, :method => :get do %>
+               <div class="input-group">
+                 <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="我的最爱！">
+                 <div class="input-group-btn">
+                   <button class="btn btn-default" type="submit">
+                     <i class="glyphicon glyphicon-search"></i>
+                   </button>
+                 </div>
+               </div>
+               <% end %>
+            </div>
+            <!--lw分隔线---->
       <ul class="nav navbar-nav navbar-right">
           <li>
              <%= link_to carts_path do  %>
