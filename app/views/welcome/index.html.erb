@@ -22,10 +22,16 @@
      }
 
      div.col-sm-4 {
-         margin: 10px;
+         margin: 20px;
          border: 1px solid #ccc;
-         float: left;
-         width: 300px;
+         float: center;
+         width: 350px;
+     }
+
+     div.col-md-4{
+       margin: 20px;
+       float: center;
+       width: 350px;
      }
 
      div.col-sm-4:hover {
@@ -35,6 +41,13 @@
      div.col-sm-4 img {
          width: 100%;
          height: auto;
+     }
+
+     div.media {
+         width: 1100px;
+         border: 5px solid #777;
+         float: center;
+         padding: 10px;
      }
 
      div.desc {
@@ -51,14 +64,14 @@
       <video autoplay loop muted poster="screenshot.jpg" id="background">
           <source src="http://newimgcdn.lecake.com/web/images/home/home_video_1.mp4" type="video/mp4">
       </video>
-    </div><br>
+    </div>
 
-<<div class="media">
+<<div class="container media">
     <div class="media-left">
     <img src="http://ww3.sinaimg.cn/large/006tKfTcgy1fg0zkgrhfaj30qe0q4agz.jpg" class="img-circle media-object"  width="400" height="400">
   </div>
   <div class="media-body text-center">
-    <h3 class="media-heading">老板娘简介</h3><br>
+    <br><br><h3 class="media-heading">老板娘简介</h3><br>
     <h4> 资深猫奴，有一只超怪超乖的黑喵 </h4> <br>
     <h4> 爱美人士，每天都有美美的自拍照 </h4> <br>
     <h4> 最关键是有超有爱的程师傅在身边 </h4> <br>
@@ -70,7 +83,7 @@
 
 
 <div class="container text-center ">
-  <h3>慕斯罐</h3><br>
+  <h2>慕斯罐</h2><br>
   <div class="row">
     <div class="col-sm-4">
       <a target="_blank" href="#">
@@ -106,7 +119,7 @@
 </div><br>
 
 <div class="container text-center">
-  <h3>盒子蛋糕</h3><br>
+  <h2>盒子蛋糕</h2><br>
   <div class="row">
     <div class="col-sm-4 col-xs-6">
       <img src="http://ww3.sinaimg.cn/large/006tKfTcgy1fg0d2mthkzj30j60f6wld.jpg" class="img-responsive" style="width:100%" alt="Image">
@@ -151,7 +164,7 @@
 
 
 <div class="container text-center">
-  <h3>芝士类</h3><br>
+  <h2>芝士类</h2><br>
   <div class="row">
     <div class="col-sm-4">
       <img src="http://ww3.sinaimg.cn/large/006tNc79gy1fg0cpw3jx7j30jc0fg45p.jpg" class="img-responsive" style="width:100%" alt="Image">
@@ -175,7 +188,7 @@
 </div><br>
 
 <div class="container text-center">
-  <h3>千层雪及奶酪包</h3><br>
+  <h2>千层雪及奶酪包</h2><br>
   <div class="row">
     <div class="col-sm-4">
       <img src="http://ww4.sinaimg.cn/large/006tKfTcgy1fg0cximddzj30ja0fin2h.jpg" class="img-responsive" style="width:100%" alt="Image">
@@ -216,11 +229,13 @@
   </div>
 </div><br>
 
+<div class="container">
  <div class="row">
-  <div class="col-sm-4">
-    <p class="text-center"><strong>配送服务</strong></p><br>
+   <h2 class="text-center">工商服务时间</h2>
+  <div class="col-md-4">
+    <h4 class="text-center"><strong>配送服务</strong></h4><br>
     <a href="#demo" data-toggle="collapse">
-      <img src="http://www.u-sin2011.com/upload/images/配送服務標題(2).JPG"  alt="Random Name">
+      <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple122/v4/1f/b4/f6/1fb4f63d-180f-dca4-886a-8bdd153f910b/source/256x256bb.jpg"  class="img-circle" alt="Random Name">
     </a>
     <div id="demo" class="collapse">
       <p>每天下午送货，单位地址下班前送到</p>
@@ -231,10 +246,10 @@
 
     </div>
   </div>
-  <div class="col-sm-4">
-    <p class="text-center"><strong>食材保证</strong></p><br>
+  <div class="col-md-4">
+    <h4 class="text-center"><strong>食材保证</strong></h4><br>
     <a href="#demo2" data-toggle="collapse">
-      <img src="http://www.hblian.com/data/files/store_411/goods_165/small_201703031412458108.jpeg"  alt="Random Name">
+      <img src="http://www.hblian.com/data/files/store_411/goods_165/small_201703031412458108.jpeg"  class="img-circle" alt="Random Name">
     </a>
     <div id="demo2" class="collapse">
       <p>纯手工制作</p>
@@ -242,10 +257,10 @@
       <p>食材均为店主亲自采购</p>
     </div>
   </div>
-  <div class="col-sm-4">
-    <p class="text-center"><strong>会员优惠</strong></p><br>
+  <div class="col-md-4">
+    <h4 class="text-center"><strong>会员优惠</strong></h4><br>
     <a href="#demo3" data-toggle="collapse">
-      <img src="http://ww1.sinaimg.cn/large/006tNc79gy1ffxtfo7yc5j307i07hmxd.jpg"  alt="Random Name">
+      <img src="http://ww1.sinaimg.cn/large/006tNc79gy1ffxtfo7yc5j307i07hmxd.jpg" class="img-circle" alt="Random Name">
     </a>
     <div id="demo3" class="collapse">
       <p>充800远即可成为本店会员</p>
@@ -254,6 +269,7 @@
       <p>享受限量甜品优先品尝</p>
     </div>
   </div>
+</div>
 </div><br>
 
 </body>
