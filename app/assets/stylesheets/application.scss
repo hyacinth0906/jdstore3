@@ -13,180 +13,181 @@
  *= require_tree .
  *= require_self
  */
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');   //引入google思源黑简在线字体 需要使用VPN才可生效
-
+@import url( 'https://fonts.googleapis.com/earlyaccess/notosanssc.css'); //引入google思源黑简在线字体 需要使用VPN才可生效
 /****** LOGIN MODAL ******/
 .loginmodal-container {
-  padding: 30px;
-  max-width: 350px;
-  width: 100% !important;
-  background-color: #F7F7F7;
-  margin: 0 auto;
-  border-radius: 2px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  font-family: roboto;
+    padding: 30px;
+    max-width: 350px;
+    width: 100% !important;
+    background-color: #F7F7F7;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    font-family: roboto;
 }
 
 .loginmodal-container h1 {
-  text-align: center;
-  font-size: 1.8em;
-  font-family: roboto;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: roboto;
 }
 
 .loginmodal-container input[type=submit] {
-  width: 100%;
-  display: block;
-  margin-bottom: 10px;
-  position: relative;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
 }
 
-.loginmodal-container input[type=text], input[type=password] {
-  height: 44px;
-  font-size: 16px;
-  width: 100%;
-  margin-bottom: 10px;
-  -webkit-appearance: none;
-  background: #fff;
-  border: 1px solid #d9d9d9;
-  border-top: 1px solid #c0c0c0;
-  /* border-radius: 2px; */
-  padding: 0 8px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+.loginmodal-container input[type=text],
+input[type=password] {
+    height: 44px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    /* border-radius: 2px; */
+    padding: 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
-.loginmodal-container input[type=text]:hover, input[type=password]:hover {
-  border: 1px solid #b9b9b9;
-  border-top: 1px solid #a0a0a0;
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+.loginmodal-container input[type=text]:hover,
+input[type=password]:hover {
+    border: 1px solid #b9b9b9;
+    border-top: 1px solid #a0a0a0;
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .loginmodal {
-  text-align: center;
-  font-size: 14px;
-  font-family: 'Arial', sans-serif;
-  font-weight: 700;
-  height: 36px;
-  padding: 0 8px;
-/* border-radius: 3px; */
-/* -webkit-user-select: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    height: 36px;
+    padding: 0 8px;
+    /* border-radius: 3px; */
+    /* -webkit-user-select: none;
   user-select: none; */
 }
 
 .loginmodal-submit {
-  /* border: 1px solid #3079ed; */
-  border: 0px;
-  color: #fff;
-  text-shadow: 0 1px rgba(0,0,0,0.1);
-  background-color: #4d90fe;
-  padding: 17px 0px;
-  font-family: roboto;
-  font-size: 14px;
-  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+    /* border: 1px solid #3079ed; */
+    border: 0;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    background-color: #4d90fe;
+    padding: 17px 0;
+    font-family: roboto;
+    font-size: 14px;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
 }
 
 .loginmodal-submit:hover {
-  /* border: 1px solid #2f5bb7; */
-  border: 0px;
-  text-shadow: 0 1px rgba(0,0,0,0.3);
-  background-color: #357ae8;
-  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+    /* border: 1px solid #2f5bb7; */
+    border: 0;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background-color: #357ae8;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 
 .loginmodal-container a {
-  text-decoration: none;
-  color: #666;
-  font-weight: 400;
-  text-align: center;
-  display: inline-block;
-  opacity: 0.6;
-  transition: opacity ease 0.5s;
+    text-decoration: none;
+    color: #666;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    opacity: 0.6;
+    transition: opacity ease 0.5s;
 }
 
-.login-help{
-  font-size: 12px;
+.login-help {
+    font-size: 12px;
 }
 
 body {
-     font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
-     color: #666;                                        // 修改全站的字体主色 压低亮度
-     }
-
-body {
-         background: url("https://ak5.picdn.net/shutterstock/videos/21151192/thumb/1.jpg");
-         //使用 iPic这个软件即可将图片转换为图片超链接，app store 搜索 iPic 即可
-
-         background-size: cover;
-         //这段代码主要实现了图片不会被拉伸变现的效果，具体细则在我发布的另一个教程中有说明
-
-         background-attachment: fixed;
-         background-repeat: no-repeat;
-         font-family: 'Open Sans', sans-serif;
-     }
-
- .navbar-fixed-top {
-         top: 0px;
-     }
-
- .navbar-fixed-top, .navbar-fixed-bottom {
-         position: fixed;
-         top: 0px;
-         right: 0;
-         left: 0;
-         z-index: 1030;
-     }
-
- html {
-        position: relative;
-        min-height: 100%;
-      }
-
- body {
-        /* Margin bottom by footer height */
-        margin-bottom: 100px;
-      }
-
-  /* search-id */
-  #search-id {
-  width: 200px;
-  padding-top: 7px;
-
+    font-family: 'Noto Sans SC', sans-serif;
+    // google思源黑简作为主字体
+    color: #666;
+    // 修改全站的字体主色 压低亮度
 }
 
+body {
+    background: url("https://ak5.picdn.net/shutterstock/videos/21151192/thumb/1.jpg");
+    //使用 iPic这个软件即可将图片转换为图片超链接，app store 搜索 iPic 即可
+    background-size: cover;
+    //这段代码主要实现了图片不会被拉伸变现的效果，具体细则在我发布的另一个教程中有说明
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+}
 
+.navbar-fixed-top {
+    top: 0;
+}
 
-.footer {
-         position: absolute;
-         bottom: 0;
-         width: 100%;
-         /* Set the fixed height of the footer here */
-         height: 100px;
-         background-color: white;
-         margin: 0 -15px;
+.navbar-fixed-bottom,
+.navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
 
-         p {
-            color: black;
-           margin-top: 30px;
-         }
-        }
+html {
+    position: relative;
+    min-height: 100%;
+}
 
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 100px;
+}
+/* search-id */
+#search-id {
+    width: 200px;
+    padding-top: 7px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 100px;
+    background-color: rgba(208, 54, 118, 0.42);
+    margin: 0 -15px;
+
+    p {
+        color: black;
+        font-size: 18px;
+        margin-top: 30px;
+        text-align: center;
+        line-height: 110px;
+    }
+}
 //----foot测试
-#foo {
-  width: 100%;
-  height: 100px;
-  background: rgba(222, 158, 158, 0.8);
-  position: absolute;
+
+/* #foo {
+    width: 100%;
+    height: 100px;
+    background:;
+    position: absolute;
 }
+
 #foo p {
-  color: #885050;
-  font-size: 15px;
-  text-align: center;
-  line-height: 110px;
-}
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    line-height: 110px;
+} */

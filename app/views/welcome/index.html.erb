@@ -1,12 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+<html>
 <style>
  video {
    margin-top: 0;
@@ -16,7 +9,7 @@
    width: 100%;
  }
 
- body {
+     body {
      font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
      color: #666;                                        // 修改全站的字体主色 压低亮度
      }
@@ -29,14 +22,11 @@
          background-color: white;
      }
 
-     div.col-md-4{
-       margin: 20px;
-       float: center;
-       width: 350px;
-     }
 
      div.col-sm-4:hover {
          border: 2px solid #777;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+         transition: all ease-in-out 0.45s;/*--延迟0。45s出现的响应式按扭阴影---*/
      }
 
      div.col-sm-4 img {
@@ -56,9 +46,28 @@
          text-align: center;
      }
 
-     #foo {
-       margin-left: -15px;
+     div.col-md-4{
+       margin: 100px, 50px, 100px, 50px;
+       float: center;
+       width: 350px;
      }
+
+     #footer {
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         /* Set the fixed height of the footer here */
+         height: 100px;
+         background-color: rgba(208, 54, 118, 0.42);
+         margin: 0 -15px;
+
+         p {
+             color: black;
+             font-size: 18px;
+             margin-top: 30px;
+             text-align: center;
+             line-height: 110px;
+         }
  </style>
 <body>
 
@@ -237,48 +246,37 @@
 <div class="container">
  <div class="row">
    <h2 class="text-center">工商服务时间</h2>
-  <div class="col-md-4">
-    <h4 class="text-center"><strong>配送服务</strong></h4><br>
-    <a href="#demo" data-toggle="collapse">
-      <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple122/v4/1f/b4/f6/1fb4f63d-180f-dca4-886a-8bdd153f910b/source/256x256bb.jpg"  class="img-circle" alt="Random Name">
-    </a>
-    <div id="demo" class="collapse">
+  <div class="col-md-4 text-center">
+    <h4><strong>配送服务</strong></h4><br>
+      <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple122/v4/1f/b4/f6/1fb4f63d-180f-dca4-886a-8bdd153f910b/source/256x256bb.jpg"  class="img-circle" >
       <p>每天下午送货，单位地址下班前送到</p>
       <p>请保持下午电话畅通，家中有人</p>
       <p>不接急单，勿催！</p>
       <p>非外卖，不包送上楼，烦请下楼领取</p>
       <p>路线规划不同，不确定具体到货时间</p>
-
-    </div>
   </div>
-  <div class="col-md-4">
-    <h4 class="text-center"><strong>食材保证</strong></h4><br>
-    <a href="#demo2" data-toggle="collapse">
+
+  <div class="col-md-4 text-center">
+    <h4><strong>食材保证</strong></h4><br>
       <img src="http://ww3.sinaimg.cn/large/006tNbRwgy1fg21hqyajoj307006udg0.jpg"  class="img-circle" alt="Random Name">
-    </a>
-    <div id="demo2" class="collapse">
       <p>纯手工制作</p>
       <p>进口顶级原料</p>
       <p>绝不使用添加剂</p>
-    </div>
   </div>
-  <div class="col-md-4">
-    <h4 class="text-center"><strong>会员优惠</strong></h4><br>
-    <a href="#demo3" data-toggle="collapse">
+
+  <div class="col-md-4 text-center">
+    <h4><strong>会员优惠</strong></h4><br>
       <img src="http://ww1.sinaimg.cn/large/006tNbRwgy1fg21k1n5e4j306x072415.jpg" class="img-circle" alt="Random Name">
-    </a>
-    <div id="demo3" class="collapse">
       <p>充800远即可成为本店会员</p>
       <p>免费赠送盒子蛋糕一次</p>
       <p>享受一次生日蛋糕8.8折优惠</p>
       <p>享受限量甜品优先品尝</p>
-    </div>
   </div>
 </div>
 </div><br>
 
-<div id="foo">
-  <p>Copyright ©2017 猫依工坊 Design by 杨茜 李婉</p>
+<div id="footer">
+  <p>Copyright ©2017 猫伊工坊 Design by 杨茜 李婉</p>
 </div>
 
 </body>
