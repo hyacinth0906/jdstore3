@@ -11,6 +11,7 @@
       <div class="row @products-show0"></div>
         <tbody>
           <% @products.each do |product| %>
+<<<<<<< HEAD
           <div container>
             <div class="row">
 
@@ -20,6 +21,19 @@
               </div>
             </div>
           </div>
+=======
+            <div class="row products-show">
+
+              <div class="col-md-12 col-lg-9 col-lg-offset-1">
+
+                  <div class="pull-right">
+                    发布时间：<%= product.created_at.to_date %>
+                  </div>
+                  <p ><%= link_to(product.title,product_path(product)) %></p>
+
+              </div>
+            </div>
+>>>>>>> fd1b542d60683ae8cd67ff9bce26640be2fc1bca
           <% end %>
         </tbody>
       </div>

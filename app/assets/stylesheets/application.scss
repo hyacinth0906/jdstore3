@@ -122,6 +122,7 @@ body {
 }
 
 body {
+<<<<<<< HEAD
     background: url("https://ak5.picdn.net/shutterstock/videos/21151192/thumb/1.jpg");
     //使用 iPic这个软件即可将图片转换为图片超链接，app store 搜索 iPic 即可
     background-size: cover;
@@ -191,3 +192,63 @@ body {
     text-align: center;
     line-height: 110px;
 } */
+=======
+         background: url("https://ak9.picdn.net/shutterstock/videos/25325864/thumb/1.jpg");
+         //使用 iPic这个软件即可将图片转换为图片超链接，app store 搜索 iPic 即可
+
+         background-size: cover;
+         //这段代码主要实现了图片不会被拉伸变现的效果，具体细则在我发布的另一个教程中有说明
+
+         background-attachment: fixed;
+         background-repeat: no-repeat;
+         font-family: 'Open Sans', sans-serif;
+     }
+
+ .navbar-fixed-top {
+         top: 0px;
+     }
+
+ .navbar-fixed-top, .navbar-fixed-bottom {
+         position: fixed;
+         top: 0px;
+         right: 0;
+         left: 0;
+         z-index: 1030;
+     }
+
+ html {
+        position: relative;
+        min-height: 100%;
+      }
+
+ body {
+        /* Margin bottom by footer height */
+        margin-bottom: 100px;
+        margin-left: 200px;
+        margin-right: 200px;
+      }
+
+  /* search-id */
+  #search-id {
+  width: 200px;
+  padding-top: 7px;
+
+}
+
+  
+
+.footer {
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         /* Set the fixed height of the footer here */
+         height: 100px;
+         background-color: white;
+         margin: 0 -15px;
+
+         p {
+            color: black;
+           margin-top: 30px;
+         }
+        }
+>>>>>>> fd1b542d60683ae8cd67ff9bce26640be2fc1bca
