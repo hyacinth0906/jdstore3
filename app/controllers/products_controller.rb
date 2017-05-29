@@ -22,8 +22,8 @@ class ProductsController < ApplicationController
 
    def search
      if @query_string.present?
-       search_result = Product.published.ransack(@search_criteria).result(:distinct => true)
-       @Products = search_result.paginate(:page => params[:page], :per_page => 5 )
+       search_result = Product.ransack(@search_criteria).result(:distinct => true)
+       @products = search_result.paginate(:page => params[:page], :per_page => 5 )
      end
    end
 
@@ -37,5 +37,5 @@ class ProductsController < ApplicationController
    def search_criteria(query_string)
      { :title_cont => query_string }
    end
-   
+
 end
