@@ -14,8 +14,8 @@
             </ul>
             <!-- lw-新增搜索-->
             <div class="navbar-form navbar-left">
-               <%= form_tag search_products_path, :method => :get do %>
-               <div class="input-group">
+               <%= form_tag search_products_path , :method => :get do %>
+               <div class="input-group" id="search-id">
                  <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="我的最爱！">
                  <div class="input-group-btn">
                    <button class="btn btn-default" type="submit">
