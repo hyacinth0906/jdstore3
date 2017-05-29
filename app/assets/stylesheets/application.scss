@@ -151,8 +151,6 @@ body {
  body {
         /* Margin bottom by footer height */
         margin-bottom: 100px;
-        margin-left: 200px;
-        margin-right: 200px;
       }
 
   /* search-id */
@@ -162,7 +160,7 @@ body {
 
 }
 
-  
+
 
 .footer {
          position: absolute;
@@ -178,3 +176,17 @@ body {
            margin-top: 30px;
          }
         }
+
+//----foot测试
+#foo {
+  width: 100%;
+  height: 100px;
+  background: rgba(222, 158, 158, 0.8);
+  position: absolute;
+}
+#foo p {
+  color: #885050;
+  font-size: 15px;
+  text-align: center;
+  line-height: 110px;
+}
