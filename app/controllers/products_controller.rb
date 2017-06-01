@@ -2,26 +2,16 @@ class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
 
   def index
+    if params[:category].blank?
     @products = Product.all
+  else
+    @category_id = Category.find_by(name: params[:category]).id
+    @products = Product.where(:category_id => @category_id)
   end
+    end
 
   def show
     @product = Product.find(params[:id])
-  end
-
-  def new
-    @app = App.new
-    @categories = Category.all.map { |c| [c.name, c.id] } #这一行为加入的代码
-  end
-
-  def create
-    @product = Product.new(product_params)
-    @product.category_id = params[:category_id]
-    if @product.save
-      redirect_to admin_products_path
-    else
-      render :new
-    end
   end
 
   def add_to_cart
