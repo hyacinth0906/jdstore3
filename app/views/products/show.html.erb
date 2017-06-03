@@ -31,7 +31,7 @@
     <div class="product-quantity">
       类别： <%= @product.category %>
      </div>
-  </div> 
+  </div>
 
     <div class="pull-right">
       <% if @product.quantity.present? && @product.quantity >0 %>
@@ -42,6 +42,9 @@
   </div>
 </div>
 <div class="productDetail-introImg">
+  <ul class="nav nav-tabs">
+   <li role="presentation" class="active"><a href="#">商品详情</a></li>
+ </ul>
    <% if @prints.present? %>
     <% @prints.each_with_index do |p, index| %>
         <%= image_tag p.avatar.url %>
