@@ -1,7 +1,7 @@
-<div class="content"><br>
+<div id="well" class="content"><br>
   <h3>您的最爱</h3><br>
   <% if @query_string.blank? %>
-    <div class="text-center">
+    <div  class="text-center">
       亲！没有符合搜索条件的美食哦！<br>
       <%= link_to("立即查看美食", products_path, class: "btn btn-sm btn-success") %>
     </div>

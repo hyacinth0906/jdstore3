@@ -128,18 +128,10 @@ body {
     //这段代码主要实现了图片不会被拉伸变现的效果，具体细则在我发布的另一个教程中有说明
     background-attachment: fixed;
     background-repeat: no-repeat;
+    padding: 50px 0 0 0;
 }
 
 
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 100px;
-}
 /* search-id */
 #search-id {
     width: 200px;
@@ -164,13 +156,6 @@ body {
         min-height: 100%;
       }
 
- body {
-        /* Margin bottom by footer height */
-        margin-bottom: 100px;
-        margin-left: 200px;
-        margin-right: 200px;
-      }
-
   /* search-id */
   #search-id {
   width: 200px;
@@ -180,12 +165,32 @@ body {
 
 
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 100px;
+.footer {
     background-color: rgba(119, 13, 13, 0.2);
-    margin: 0 -15px;
+    padding: 16px 10px 6px;
+    text-align: center;
+    font-size: 12px;
+    color: black;
+}
+
+.footer span {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 24px;
+    line-height: 23px;
   }
+
+.main {
+  margin-bottom: 70px;
+}
+
+//------尝试footer置地
+#well {
+  margin-bottom: 500px;
+}
+
+//------购物车页轮播图
+#new-cart{
+  margin: 400px, 400px, 400px, 400px;
+}
