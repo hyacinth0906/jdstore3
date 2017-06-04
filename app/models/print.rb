@@ -1,4 +1,4 @@
 class Print < ApplicationRecord
-   mount_uploader :avatar, AvatarUploader
+   mount_uploader :detail, DetailUploader
    belongs_to :product
 end

@@ -1,17 +1,16 @@
-class AvatarUploader < CarrierWave::Uploader::Base
+class DetailUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
-
-  include CarrierWave::MiniMagick
+  # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  if Rails.env.production?
-    storage :qiniu
-  elsif Rails.env.development?
-    storage :file
-  end
+  include CarrierWave::MiniMagick
 
+# 注释掉resize_to_fit 会导致页面加载很慢，但是保留可能导致图片失真；此外，其中的参数可以根据自己的图片大小进行调整
+ process resize_to_fill: [1280, 300]
+
+ # Choose what kind of storage to use for this uploader:
+ storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -20,31 +19,12 @@ class AvatarUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
-  #   # For Rails 3.1  asset pipeline compatibility:
-  #   # ActionController::Base.helpers.asset_path("fallback/"   [version_name, "default.png"].compact.join('_'))
+  #   # For Rails 3.1+ asset pipeline compatibility:
+  #   # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
   #
-  #   "/images/fallback/"   [version_name, "default.png"].compact.join('_')
-
-# lw-avatar
-   process resize_to_fill: [800, 800] #可自行定义图片格式
-
-
-   version :thumb do
-    process resize_to_fill: [200,200]
-   end
-
-   version :medium do
-    process resize_to_fill: [400,400]
-   end
-  # Provide a default URL as a default if there hasn't been a file uploaded:
-  # def default_url(*args)
-  #   # For Rails 3.1 asset pipeline compatibility:
-  #   # ActionController::Base.helpers.asset_path("fallback/"  [version_name, "default.png"].compact.join('_'))
-  #
-  #   "/images/fallback/"  [version_name, "default.png"].compact.join('_')
+  #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
   # Process files as they are uploaded:

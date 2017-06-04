@@ -1,11 +1,29 @@
 <div class="container">
 <div class="row">
-  <div class="col-md-6">
-    <% if @product.image.present? %>
-      <%= image_tag(@product.image.medium.url, class: "thumbnail wow pulse", data: { wow_delay: "1s" }) %>
-    <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-    <% end %>
+  <!-- 主图 -->
+  <div class="col-md-7">
+      <div class="productDetail">
+        <div class="productDetail-left">
+          <div class="productDetail-left-bigImage">
+            <%= image_tag(@product.photos[0].avatar.thumb.url) %>
+          </div>
+          <!-- 下方小图-->
+          <div class="productDetail-left-imageList ">
+            <div class="productDetail-left-imageList-item">
+              <%= image_tag @product.photos[0].avatar.thumb.url  %>
+            </div>
+            <div class="productDetail-left-imageList-item">
+              <%= image_tag @product.photos[1].avatar.thumb.url  %>
+            </div>
+            <div class="productDetail-left-imageList-item">
+              <%= image_tag @product.photos[2].avatar.thumb.url  %>
+            </div>
+            <div class="productDetail-left-imageList-item">
+              <%= image_tag @product.photos[3].avatar.thumb.url  %>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 
   <div class="col-md-6">
@@ -28,9 +46,6 @@
       库存 : <%= @product.quantity %>
     </div>
 
-    <div class="product-quantity">
-      类别： <%= @product.category %>
-     </div>
   </div>
 
     <div class="pull-right">
@@ -47,7 +62,7 @@
  </ul>
    <% if @prints.present? %>
     <% @prints.each_with_index do |p, index| %>
-        <%= image_tag p.avatar.url %>
+        <%= image_tag p.detail.url %>
     <% end %>
    <% else %>
       <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>

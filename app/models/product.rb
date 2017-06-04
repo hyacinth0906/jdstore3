@@ -2,6 +2,11 @@ class Product < ApplicationRecord
   mount_uploader :image, ImageUploader
   belongs_to :category
 
+
   has_many :prints
   accepts_nested_attributes_for :prints
+
+  has_many :photos
+  accepts_nested_attributes_for :photos
+
 end
