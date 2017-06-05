@@ -29,16 +29,20 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/"   [version_name, "default.png"].compact.join('_')
 
 # lw-avatar
-   process resize_to_fill: [800, 800] #可自行定义图片格式
+process resize_to_fill: [800,800]
+version :thumb do
+  process resize_to_fill: [200,200]
+end
 
-
-   version :thumb do
-    process resize_to_fill: [200,200]
-   end
-
-   version :medium do
-    process resize_to_fill: [400,400]
-   end
+version :medium do
+  process resize_to_fill: [400,400]
+end
+version :small do
+  process resize_to_fill: [100,100]
+end
+version :xsmall do
+  process resize_to_fill: [70,70]
+end
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1 asset pipeline compatibility:

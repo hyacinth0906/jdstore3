@@ -1,71 +1,81 @@
-<div class="container">
-<div class="row">
-  <!-- 主图 -->
-  <div class="col-md-7">
-      <div class="productDetail">
-        <div class="productDetail-left">
-          <div class="productDetail-left-bigImage">
-            <%= image_tag(@product.photos[0].avatar.thumb.url) %>
-          </div>
-          <!-- 下方小图-->
-          <div class="productDetail-left-imageList ">
-            <div class="productDetail-left-imageList-item">
-              <%= image_tag @product.photos[0].avatar.thumb.url  %>
-            </div>
-            <div class="productDetail-left-imageList-item">
-              <%= image_tag @product.photos[1].avatar.thumb.url  %>
-            </div>
-            <div class="productDetail-left-imageList-item">
-              <%= image_tag @product.photos[2].avatar.thumb.url  %>
-            </div>
-            <div class="productDetail-left-imageList-item">
-              <%= image_tag @product.photos[3].avatar.thumb.url  %>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
+<div class="container show-frame">
+  <p class="show-nav">
+  <%= link_to("首页", products_path, style:"text-decoration:none") %> >
+  <%= link_to(@product.category, products_path(:category => @product.category),style:"text-decoration:none")%> >
+  <%= @product.title %>
+</p>
 
-  <div class="col-md-6">
-    <h2> <%= @product.title %> </h2>
-    <div style="height:150px;">
-       <div class="product-description">
-         <p>
-           <%= simple_format(@product.description) %>
-         </p>
+<div class="container show-card">
+
+    <div class="col-md-6 col-xs-12 ">
+
+      <% if @photos.present? %>
+       <div class="tab-content show-picture">
+         <% @photos.each_with_index do |p, index| %>
+           <% if index < 5 %>
+             <div class="tab-pane <%= render_active(index) %>" id="<%= index %>">
+
+               <%= image_tag p.avatar.medium.url %>
+             </div>
+           <% end %>
+         <% end %>
+       </div>
+       <ul class="show-photo-xsmall-box nav nav-tabs">
+         <% @photos.each_with_index do |p, index| %>
+           <% if index < 5 %>
+             <li class=""><a href="#<%= index %>" data-toggle= "tab"><%= image_tag p.avatar.xsmall.url %></a></li>
+           <% end %>
+         <% end %>
+       </ul>
+      <% else %>
+        <%= image_tag("http://placehold.it/400x400&text=No Pic", class:"thumbnail") %>
+      <% end %>
+    </div>
+
+    <div class="col-md-6 col-xs-12">
+       <h3><%= simple_format(@product.title) %></h3>
+       <div class="show-service">
+         <p class="price">售价 <span class="rmb">￥</span><span class="price"><%= @product.price %></span></p>
+       </div>
+       <div class="show-quantity">
+         <p class="quantity">库存 <span class="quantity"><%= @product.quantity %></span> </p>
+         <p class="delivery">运费 <span class="delivery">满￥108 送货上门</span></p>
+       </div>
+
+       <div class="show-action clearfix">
+         <% if @product.quantity.present? && @product.quantity > 0 %>
+           <%= link_to("加入购物车",add_to_cart_product_path(@product),:remote=>true,method: :post, class: "btn btn-lg a1") %>
+         <% else %>
+           <%= link_to("已售罄","#",class: "btn btn-lg", style:"background-color:gray;") %>
+         <% end %>
        </div>
     </div>
-
-    <div class="product-price-bgcolor">
-      <div class="product-price">
-        ￥ <%= @product.price %>
-      </div>
-    </div>
-
-    <div  class="product-quantity">
-      库存 : <%= @product.quantity %>
-    </div>
-
   </div>
 
-    <div class="pull-right">
-      <% if @product.quantity.present? && @product.quantity >0 %>
-      <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>    </div>
-    <% else %>
-       已销售一空，无法购买
-       <% end %>
-  </div>
-</div>
-<div class="productDetail-introImg">
-  <ul class="nav nav-tabs">
-   <li role="presentation" class="active"><a href="#">商品详情</a></li>
- </ul>
-   <% if @prints.present? %>
-    <% @prints.each_with_index do |p, index| %>
-        <%= image_tag p.detail.url %>
-    <% end %>
-   <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-   <% end %>
-</div>
+    <div class="nav nav-tabs">
+     <li role="presentation" class="active"><a href="#">商品详情</a></li>
+   </div>
+
+<div class="review-description clearfix">
+
+  <hr>
+ <% if @photos.present? %>
+             <% @photos.each_with_index do |p, index| %>
+               <% if index== 0 %>
+               <div class="col-md-12 col-xs-12 review-p1">
+                 <p class="text-center">产品展示</p>
+                 <%= image_tag p.avatar.medium.url %>
+                 <hr>
+                 <p class="text-center">产品细节</p>
+               </div>
+               <% else %>
+
+                 <div class="col-md-6 col-xs-6 review-p2" style="letter-spacing: -8px">
+                   <%= image_tag p.avatar.thumb.url %>
+                 </div>
+               <% end %>
+             <% end %>
+           <% else %>
+             <%= image_tag("http://placehold.it/400x400&text=No Pic", class:"thumbnail") %>
+           <% end %>
 </div>

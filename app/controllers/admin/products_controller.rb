@@ -14,6 +14,11 @@ layout "admin"
     @categories = Category.all.map { |c| [c.name, c.id] } #这一行为加入的代码
   end
 
+  def show
+    @product = Product.find(params[:id])
+    @photos = @product.photos.all
+end
+
   def create
     @product = Product.new(product_params)
     @product.category_id = params[:category_id]
@@ -41,7 +46,6 @@ layout "admin"
 
     if params[:photos] != nil
       @product.photos.destroy_all #清除原有的图片
-
 
       params[:photos]['avatar'].each do |a|
         @picture = @product.photos.create(:avatar => a)

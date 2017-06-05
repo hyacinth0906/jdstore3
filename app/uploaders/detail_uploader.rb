@@ -7,7 +7,15 @@ class DetailUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
 # 注释掉resize_to_fit 会导致页面加载很慢，但是保留可能导致图片失真；此外，其中的参数可以根据自己的图片大小进行调整
- process resize_to_fill: [1280, 300]
+process resize_to_fit: [800, 800]
+
+version :thumb do
+process resize_to_fill: [200,200]
+end
+
+version :medium do
+process resize_to_fill: [400,400]
+end
 
  # Choose what kind of storage to use for this uploader:
  storage :file

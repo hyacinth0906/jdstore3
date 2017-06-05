@@ -23,22 +23,18 @@
   </div>
 
   <% if @product.photos.present? %>
-      <span>目前商品圖</span> <br>
-      <% @product.photos.each do |p| %>
-        <%= image_tag p.avatar.thumb.url %><br>
-      <% end %>
-    <% end %>
+   <span>目前商品图</span><br>
+   <% @product.photos.each do |p| %>
+    <%= image_tag p.avatar.thumb.url , class: "thumbnail col-md-3" %>
+   <% end %>
+<% end %>
 
     <div class="group">
       <%= f.label :avatar %>
       <br>
-      <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>
+      <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>（"请上传4张图片"）
     </div>
 
-
-  <div class="group">
-    <%= f.input :detail, as: :file %>
-  </div>
 
 
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
