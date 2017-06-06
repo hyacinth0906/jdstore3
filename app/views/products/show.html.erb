@@ -1,9 +1,4 @@
 <div class="container show-frame">
-  <p class="show-nav">
-  <%= link_to("首页", products_path, style:"text-decoration:none") %> >
-  <%= link_to(@product.category, products_path(:category => @product.category),style:"text-decoration:none")%> >
-  <%= @product.title %>
-</p>
 
 <div class="container show-card">
 
@@ -35,6 +30,7 @@
     <div class="col-md-6 col-xs-12">
        <h3><%= simple_format(@product.title) %></h3>
        <div class="show-service">
+         <p class="description">简介 <span class="description"><%= @product.description %></span></p>
          <p class="price">售价 <span class="rmb">￥</span><span class="price"><%= @product.price %></span></p>
        </div>
        <div class="show-quantity">
@@ -69,7 +65,6 @@
                  <p class="text-center">产品细节</p>
                </div>
                <% else %>
-
                  <div class="col-md-6 col-xs-6 review-p2" style="letter-spacing: -8px">
                    <%= image_tag p.avatar.thumb.url %>
                  </div>
