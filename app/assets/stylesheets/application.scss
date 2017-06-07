@@ -211,9 +211,14 @@ div.about {
 }
 
 //------尝试footer置地
-#well {
-  margin-bottom: 500px;
-}
+// #well {
+//   margin-bottom: 500px;
+// }
+
+ //--lw-footer锁定---
+ html { height: 100%;}
+  body { min-height: 100%; display: flex; flex-direction: column;}
+  .content { flex: 1;}
 
 //------购物车页轮播图
 #new-cart{
