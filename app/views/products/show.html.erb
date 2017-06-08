@@ -74,3 +74,13 @@
              <%= image_tag("http://placehold.it/400x400&text=No Pic", class:"thumbnail") %>
            <% end %>
 </div>
+
+<div class="nav nav-tabs">
+ <li role="presentation" class="active"><a href="#"><%= @product.comments.count %> 商品评论</a></li>
+</div>
+  <hr>
+  <div id="comments">
+    <%= render @product.comments%>
+    <%= render "comments/form"%>
+
+  </div>
